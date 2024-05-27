@@ -23,7 +23,11 @@ db.connect((err) => {
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [""],
+  methods: ["POST","GET"],
+  credentials: true
+}));
 
 // Routes
 
