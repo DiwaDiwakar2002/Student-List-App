@@ -22,7 +22,7 @@ const Table: React.FC<TableProps> = ({ searchText }) => {
     useEffect(() => {
       const fetchStudentList = async () => {
         try {
-          const res = await axios.get("http://localhost:8800/studentlist"); // Fetch student data from API
+          const res = await axios.get("https://student-list-api-eight.vercel.app/studentlist"); // Fetch student data from API
           setStudentDatas(res.data); // Set student data state
         } catch (err) {
           console.error("Error fetching student list:", err); // Log any errors
@@ -41,7 +41,7 @@ const Table: React.FC<TableProps> = ({ searchText }) => {
   // Function to handle student deletion
   const handleDelete = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:8800/studentlist/${id}`); // Delete student from API
+      await axios.delete(`https://student-list-api-eight.vercel.app/studentlist/${id}`); // Delete student from API
       // Update the state to remove the deleted student
       setStudentDatas((prevStudentDatas) =>
         prevStudentDatas.filter((student) => student.id !== id)
