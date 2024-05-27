@@ -24,7 +24,7 @@ db.connect((err) => {
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: [""],
+  origin: ["https://student-list-app.vercel.app/"],
   methods: ["POST","GET"],
   credentials: true
 }));
