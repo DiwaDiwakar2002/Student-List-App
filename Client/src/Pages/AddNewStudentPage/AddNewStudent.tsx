@@ -25,7 +25,7 @@ const AddNewStudent = () => {
   const addNewStudentSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post("https://student-list-api-eight.vercel.app//studentlist", formData); // Post form data to API
+      await axios.post("https://student-list-api-eight.vercel.app/studentlist", formData); // Post form data to API
       navigate("/"); // Navigate to home page after submission
     } catch (err) {
       console.error("Error addnewstudent form:", err); // Log any errors
