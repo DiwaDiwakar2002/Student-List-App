@@ -22,7 +22,7 @@ const EditStudent = () => {
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8800/studentlist/${studentId}`);
+        const res = await axios.get(`https://student-list-api-eight.vercel.app/studentlist/${studentId}`);
         const { name, email, number, enroll_number, date_of_admission } = res.data;
 
         // Format admission date
